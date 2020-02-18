@@ -6,6 +6,65 @@
 -->
 <html>
 	<head>
+
+		<script>
+		function myFunction(num) {
+			var bio;
+			var jobTitle;
+			var grimeo;
+			var plantr;
+			var spaceRunner;
+			var address;
+			var phone;
+			var jobTitle;
+			var knownLanguages;
+			var technologies;
+			var contact;
+			var aboutMe;
+			var jimbo;
+			if (num === 1) {
+				bio = "I'm a full stack developer with a passion for design and user experience. As a creative, my approach to engineering lies in the belief that a program's output should be as eloquently designed as the code inside.I'm motivated to develop software for the simple fact that it keeps me challenged and has given me the opportunity to learn on a daily basis.";
+				grimeo= 'A pixel perfect dark themed Vimeo clone.';
+				plantr='Web based app for monitoring houseplant watering schedules.';
+				spaceRunner='Space themed game built using the 3js library';
+				address='Address';
+				phone='Phone';
+				jobTitle='Software Developer';
+				knownLanguages='Languages, Libraries and Technologies';
+				technologies='Technologies';
+				contact='Contact';
+				aboutMe='About me';
+				jimbo='About me';
+			} else if(num === 2) {
+				bio = "Je suis un développeur full stack avec une passion pour le design et l'expérience client. Ayant un passé créatif dans le milieu de la musique, je suis convaincu que la facture visuelle d'un site web doit être aussi bien conçu que le code qu'il contient. Pour moi, concevoir des logiciels représente une opportunité passionnante d'apprentissage au quotidien.";
+				grimeo= "Un clône de Vimeo en version un peu plus glauque";
+				plantr="Application web qui vous aide à prendre soin de vos plantes d'intérieur";
+				spaceRunner="Jeu à thématique d'espace construit avec 3js";
+				address='Adresse';
+				phone='Téléphone';
+				jobTitle='Développeur logiciel';
+				knownLanguages='Expertise';
+				technologies='Expertise';
+				contact='Informations personnelles';
+				aboutMe='À propos';
+				jimbo='À propos de moi';
+			}
+			
+			document.getElementById("jobTitle").innerHTML = jobTitle;
+			document.getElementById("bio").innerHTML = bio;
+			document.getElementById("grimeo").innerHTML = grimeo;
+			document.getElementById("plantr").innerHTML = plantr;
+			document.getElementById("space-runner").innerHTML = spaceRunner;
+			document.getElementById("address").innerHTML = address;
+			document.getElementById("phone").innerHTML = phone;
+			document.getElementById("known-languages").innerHTML = knownLanguages;
+			document.getElementById("technologies").innerHTML = technologies;
+			document.getElementById("jimbo").innerHTML = jimbo;
+			document.getElementById("contact").innerHTML = contact;
+			document.getElementById("about-me").innerHTML = aboutMe;
+			}
+		</script>
+
 		<title>Joe Nicholson</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -23,16 +82,18 @@
 					<header id="header" class="alt">
 						<!-- <span class="logo"><img src="images/joe.jpg" alt="" /></span> -->
 						<h1>Joe Nicholson</h1>
-						<p>Software Engineer<br />
+						<p id='jobTitle'>Software Developer<br />
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#first">Portfolio</a></li>
-							<li><a href="#second">Technologies</a></li>
-							<li><a href="#footer">Contact</a></li>
+							<li><a id="about-me" href="#intro" class="active">About me</a></li>
+							<li><a id="portfolio" href="#first">Portfolio</a></li>
+							<li><a id="technologies" href="#second">Technologies</a></li>
+							<li><a id="contact" href="#footer">Contact</a></li>
+							<button className ='lang' onclick="myFunction(2)">Français</button>
+							<button className='lang' onclick="myFunction(1)">English</button>
 						</ul>
 					</nav>
 
@@ -44,40 +105,40 @@
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
-											<h2>About me</h2>
+											<h2 id="jimbo">About me</h2>
 										</header>
-										<p>I'm a full stack developer with a passion for design and user experience. As a creative,
+										<p id='bio'>I'm a full stack developer with a passion for design and user experience. As a creative,
 											my approach to engineering lies in the belief that a program's output should be as eloquently designed as the code inside.
 											I'm motivated to develop software for the simple fact that it keeps me challenged and has given me the opportunity to learn on a daily basis.
-										</p>
+										<br>
 										<ul class="actions">
-											<li><a href="https://docs.google.com/document/d/1oifpbMg1HmckHNpzIDQJ6ai0wtfklhdc69Jbd67MhHQ/edit?usp=sharing" class="button">Resume</a></li>
+											<li><a href="https://docs.google.com/document/d/1oifpbMg1HmckHNpzIDQJ6ai0wtfklhdc69Jbd67MhHQ/edit?usp=sharing" class="button">CV</a></li>
 										</ul>
 									</div>
-									<span class="image"><img src="images/joe.jpg" alt="" /></span>
+									<span class="image"><img src="images/joeq.png" alt="" /></span>
 								</div>
 							</section>
 
 						<!-- First Section -->
 							<section id="first" class="main special">
 								<header class="major">
-									<h2>Portfolio</h2>
+									<h2 id='portfolio'>Portfolio</h2>
 								</header>
 								<ul class="features">
 									<li>
 										<a href="http://grimeo.herokuapp.com/#/" class="joe-pic icon solid major style5 fas fa-play-circle"></a>
 										<a href="http://grimeo.herokuapp.com/#/"><h3 class='port'>Grimeo</h3></a>
-										<p>A pixel perfect dark themed Vimeo clone.</p>
+										<p id='grimeo'>A pixel perfect dark themed Vimeo clone.</p>
 									</li>
 									<li>
 										<a href="http://plantr-app.herokuapp.com/" class="joe-pic icon solid major style1 fas fa-seedling"></a>
 										<a href="http://plantr-app.herokuapp.com/"><h3 class='port'>plantr</h3></a>
-										<p>Web based app for monitoring houseplant watering schedules.</p>
+										<p id='plantr'>Web based app for monitoring houseplant watering schedules.</p>
 									</li>
 									<li>
 										<a href="http://www.joenicholson.info/spaceRunner/" class="joe-pic icon solid major style5 fa-space-shuttle"></a>
 										<a href="http://www.joenicholson.info/spaceRunner/"><h3 class='port'>Space Runner</h3></a>
-										<p>Space themed game built using the 3js library.</p>
+										<p id='space-runner'>Space themed game built using the 3js library.</p>
 									</li>
 								</ul>
 								<footer class="major">
@@ -90,8 +151,7 @@
 						<!-- Second Section -->
 							<section id="second" class="main special">
 								<header class="major">
-									<h2>Technologies Used</h2>
-									<p>Known languages, libraries and technologies</p>
+									<h2 id='known-languages'>Languages, Libraries and Technologies</h2>
 								</header>
 								<ul class="statistics">
 									<li class="style1">
@@ -144,13 +204,13 @@
 					<footer id="footer">
 				
 						<section>
-							<h2>Contact</h2>
+							<h2 id='contact'>Contact</h2>
 							<dl class="alt">
-								<dt>Address</dt>
-								<dd>414 e 119th st &bull; New York, NY 10035 &bull; USA</dd>
-								<dt>Phone</dt>
-								<dd>(347) 712-1930</dd>
-								<dt>Email</dt>
+								<dt id='address'>Address</dt>
+								<dd>6254 avenue des Érables &bull; Montréal &bull; Canada</dd>
+								<dt id='phone'>Phone</dt>
+								<dd>(514) 519-4297</dd>
+								<dt id='email'>Email</dt>
 								<dd><a href="#">joeqnicholson@gmail.com</a></dd>
 							</dl>
 							<ul class="icons">
